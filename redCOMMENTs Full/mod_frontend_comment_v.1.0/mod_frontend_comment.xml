@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="site"
+	method="upgrade">
+	<name>MOD_FRONTEND_COMMENT</name>
+	<author>Loc Le Minh</author>
+	<creationDate>January 2013</creationDate>
+	<copyright>Copyright (C) 2005 - 2012 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>loc@redweb.dk</authorEmail>
+	<authorUrl>www.redweb.dk</authorUrl>
+	<version>2.5.0</version>
+	<description>MOD_FRONTEND_COMMENT_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_frontend_comment">mod_frontend_comment.php</filename>
+		<folder>tmpl</folder>
+		<folder>css</folder>
+		<folder>js</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_frontend_comment.xml</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB.mod_frontend_comment.ini</language>
+		<language tag="en-GB">language/en-GB.mod_frontend_comment.sys.ini</language>
+		<language tag="da-DK">language/da-DK.mod_frontend_comment.ini</language>
+		<language tag="da-DK">language/da-DK.mod_frontend_comment.sys.ini</language>
+  	</languages>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+				<field name="multiple_comment" type="radio" default="0" label="MOD_FRONTEND_MULTIPLE_COMMENT" description="MOD_FRONTEND_MULTIPLE_COMMENT_DESCRIPTION">
+					<option value="1">YES</option>
+					<option value="0">NO</option>
+				</field>
+			</fieldset>
+			<fieldset name="advanced"></fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5" method="upgrade">
+    <name>com_redcomments</name>
+    <creationDate>2013-01-30</creationDate>
+    <copyright>Copyright (C) 2012. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <author>Loc Le Minh</author>
+    <authorEmail>loc@redweb.dk</authorEmail>
+    <authorUrl>http://www.redcomponent.com</authorUrl>
+    <version>1.0</version>
+    <description></description>
+    
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+	
+	<installfile>install.redcomments.php</installfile>
+	
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>redcomments.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+		<filename>parameters.xml</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+    </files>
+	 <languages folder="site">
+            <language tag="en-GB">language/en-GB.com_redcomments.ini</language>
+            <language tag="da-DK">language/da-DK.com_redcomments.ini</language>
+     </languages>
+    <administration>
+		<menu img="components/com_redcomments/assets/images/s_com_redcomments.png" >COM_REDCOMMENTS</menu>
+        <submenu>
+			<menu link="option=com_redcomments&amp;view=discussions" view="discussions" img="components/com_redcomments/assets/images/s_discussions.png" alt="Redcomments/Discussions">COM_REDCOMMENTS_TITLE_DISCUSSIONS</menu>
+			<menu link="option=com_redcomments&amp;view=comments" view="comments" img="components/com_redcomments/assets/images/s_comments.png" alt="Redcomments/Comments">COM_REDCOMMENTS_TITLE_COMMENTS</menu>
+			<menu link="option=com_redcomments&amp;view=subscriptions" view="subscriptions" img="components/com_redcomments/assets/images/s_subscriptions.png" alt="Redcomments/Subscriptions">COM_REDCOMMENTS_TITLE_SUBSCRIPTIONS</menu>
+			<menu link="option=com_redcomments&amp;view=notifications" view="notifications" img="components/com_redcomments/assets/images/s_notifications.png" alt="Redcomments/Notifications">COM_REDCOMMENTS_TITLE_NOTIFICATIONS</menu>
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>redcomments.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+			<folder>images</folder>
+        </files>
+        <languages folder="administrator">
+            <language tag="en-GB">language/en-GB.com_redcomments.ini</language>
+            <language tag="en-GB">language/en-GB.com_redcomments.sys.ini</language>
+        </languages>
+    </administration>
+</extension>
+<!-- Component built by the Joomla Component Creator -->
+<!-- http://www.notwebdesign.com/joomla-component-creator/ -->

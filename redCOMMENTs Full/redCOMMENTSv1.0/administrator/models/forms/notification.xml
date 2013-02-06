@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+              <field name="id" type="text" default="0" label="COM_REDCOMMENTS_FORM_LBL_NOTIFICATION_ID"
+            readonly="true" class="readonly"
+            description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="created_by" type="createdby" default="" 
+            label="COM_REDCOMMENTS_FORM_LBL_NOTIFICATION_CREATED_BY"
+            description="COM_REDCOMMENTS_FORM_DESC_NOTIFICATION_CREATED_BY"  /> 
+
+       <field name="user_id" type="user"
+                
+            label="COM_REDCOMMENTS_FORM_LBL_NOTIFICATION_USER_ID"
+            description="COM_REDCOMMENTS_FORM_DESC_NOTIFICATION_USER_ID" 
+                
+                
+                
+            filter="raw" /> 
+
+       <field name="notificationtext" type="textarea"
+                
+            label="COM_REDCOMMENTS_FORM_LBL_NOTIFICATION_NOTIFICATIONTEXT"
+            description="COM_REDCOMMENTS_FORM_DESC_NOTIFICATION_NOTIFICATIONTEXT" 
+                
+                
+                
+            cols="80"
+            rows="30"
+            filter="raw" /> 
+
+         <field
+        name="state"
+        type="list"
+        label="JSTATUS"
+        description="JFIELD_PUBLISHED_DESC"
+        class="inputbox"
+        size="1"
+        default="1">
+        <option value="1">JPUBLISHED</option>
+        <option value="0">JUNPUBLISHED</option>
+    </field> 
+
+                        <field name="checked_out" type="hidden" filter="unset" />
+        <field name="checked_out_time" type="hidden" filter="unset" />
+
+	</fieldset>
+
+</form>

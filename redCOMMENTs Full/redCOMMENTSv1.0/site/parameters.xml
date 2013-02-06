@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components>
+   <component>
+  	 <name>com_redcontent</name>
+  	 <views>
+  		<view>article</view>
+    	<key>article_id</key>
+     </views>
+     <views>
+  		<view>category</view>
+    	<key>category_id</key>
+    </views>	
+  </component>
+  <component>
+  	 <name>com_content</name>
+  	 <views>
+  		<view>article</view>
+    	<key>id</key>
+     </views>
+     <views>
+  		<view>category</view>
+    	<key>id</key>
+    </views>
+    <views>
+  		<view>featured</view>
+    	<key></key>
+    </views>	
+  </component>
+  <component>
+  	<name>com_redshop</name>
+  	<views>
+  		<view>product</view>
+    	<key>product_id</key>
+    </views>
+    <views>
+  		<view>category</view>
+    	<key>category_id</key>
+    </views>	
+  </component>
+</components>
